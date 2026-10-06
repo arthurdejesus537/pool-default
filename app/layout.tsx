@@ -3,6 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import MobileCta from "@/components/MobileCta/MobileCta";
+import ConsultModal from "@/components/ConsultModal/ConsultModal";
 import { site } from "@/content/site";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <main>{children}</main>
         <Footer />
         <MobileCta />
+        <ConsultModal />
       </body>
     </html>
   );

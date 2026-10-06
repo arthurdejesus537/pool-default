@@ -70,9 +70,16 @@ export type Site = {
     tagline: string;
     heading: string;
     body: string;
-    /** URL que recebe o POST do formulário (ex.: Formspree). null = modo demo. */
+    /** URL que recebe o POST do formulário (Formspree, Google Apps Script…). null = modo demo. */
     endpoint: string | null;
-    success: string;
+    /** Perguntas de múltipla escolha antes do contato (uma por etapa). */
+    steps: { name: string; question: string; options: string[] }[];
+    contactQuestion: string;
+    submitLabel: string;
+    /** {name} vira o primeiro nome digitado. */
+    thanks: { heading: string; body: string };
+    /** Carrossel do painel do formulário: frase curta sobre cada foto. */
+    slides: { headline: string; image: Img }[];
   };
   footer: { legal: string; license: string | null; social: Link[]; credit: string | null };
 };

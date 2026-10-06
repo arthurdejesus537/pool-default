@@ -28,12 +28,14 @@ export function Button({
   tone = "cream",
   type,
   disabled,
+  onClick,
 }: {
   href?: string;
   children: ReactNode;
   tone?: "cream" | "ink";
   type?: "submit" | "button";
   disabled?: boolean;
+  onClick?: () => void;
 }) {
   const cls = `${styles.button} ${tone === "ink" ? styles.buttonInk : styles.buttonCream}`;
   if (href) {
@@ -44,7 +46,7 @@ export function Button({
     );
   }
   return (
-    <button type={type ?? "button"} className={cls} disabled={disabled}>
+    <button type={type ?? "button"} className={cls} disabled={disabled} onClick={onClick}>
       {children}
     </button>
   );

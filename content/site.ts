@@ -202,7 +202,29 @@ export const site: Site = {
     heading: "Book a design consultation",
     body: "[PLACEHOLDER — what happens after the form is sent. Only promises the client keeps.]",
     endpoint: null,
-    success: "Thanks — we received your request and will be in touch.",
+    steps: [
+      {
+        name: "timeline",
+        question: "When do you want to start?",
+        options: ["As soon as possible", "In 1–3 months", "In 3–6 months", "6+ months", "Just exploring"],
+      },
+      {
+        name: "style",
+        question: "What kind of pool are you thinking?",
+        options: ["[STYLE 1]", "[STYLE 2]", "[STYLE 3]", "[STYLE 4]", "Not sure yet"],
+      },
+    ],
+    contactQuestion: "Where can we reach you?",
+    submitLabel: "Book my consultation",
+    thanks: {
+      heading: "Thank you, {name}.",
+      body: "[PLACEHOLDER — what happens next and the phone number. Only promises the client keeps.]",
+    },
+    slides: [
+      { headline: "[SHORT FACT 1]", image: ph("[Best pool photo]") },
+      { headline: "[SHORT FACT 2]", image: ph("[Second pool photo]") },
+      { headline: "[SHORT FACT 3]", image: ph("[Showroom, team or detail photo]") },
+    ],
   },
 
   footer: {

@@ -153,6 +153,8 @@ Copy sempre em inglês americano, frases curtas, números concretos, voz de quem
 - **Layout:** novo; fundo escuro; esquerda título + texto + telefone; direita formulário com linhas de 1px.
 - **Dados:** `consultation.heading`, `consultation.body`, `consultation.endpoint` (URL que recebe o POST, ex.: Formspree), `consultation.success`.
 - **Copy:** título com o CTA primário. Texto diz o que acontece depois ("We'll call within one business day" só se for verdade).
+- **Painel (ConsultModal):** todo link para `contact.ctaHref` abre um painel sobre o site com fundo desfocado. À esquerda, carrossel lento (6s) de `consultation.slides`, com uma frase curta e factual sobre cada foto. À direita, o formulário em etapas: `steps` (1–2 perguntas de escolha, ex.: quando começar e estilo) → contato (`contactQuestion`, nome, e-mail, telefone, ZIP) → agradecimento (`thanks`, `{name}` vira o primeiro nome). A mesma sequência aparece na seção da página.
+- **Envio:** `endpoint` aceita Formspree ou um Google Apps Script que grava numa planilha. Os campos enviados são as respostas das etapas, os contatos, `page` e `submitted_at`.
 
 ### 5.15 Footer
 - **Dados:** `brand`, showroom principal, `contact`, `nav`, `footer.social[]`, `footer.legal`, `footer.license`.

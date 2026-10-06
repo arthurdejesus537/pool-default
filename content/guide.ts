@@ -79,7 +79,7 @@ export const guide: Record<GuideKey, { purpose: string; copy: string; min: strin
   },
   consultation: {
     purpose: "Convert. The only job of the site.",
-    copy: "Heading = primary CTA. Body = what happens next (only true promises). Short form.",
+    copy: "Heading = primary CTA. Every CTA opens the blurred panel: 1–2 choice steps, then contact. Slide headlines = short facts with a source.",
     min: "Phone or form endpoint",
   },
   footer: {

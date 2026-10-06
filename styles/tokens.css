@@ -5,6 +5,9 @@
   --color-ink: #272727;
   --color-sage: #898f8c;
   --color-overlay: rgba(75, 75, 75, 0.45);
+  --color-backdrop: rgba(39, 39, 39, 0.35); /* fundo do painel do formulário (com blur) */
+  --color-slide-veil: rgba(39, 39, 39, 0.25); /* véu sobre as fotos do carrossel */
+  --color-bar: rgba(231, 241, 219, 0.35); /* barrinha de progresso inativa */
   --color-media-light: #a3aa9c; /* placeholder de mídia sobre fundo claro */
   --color-media-dark: #474747; /* placeholder de mídia sobre fundo escuro */
 
