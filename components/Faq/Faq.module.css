@@ -1,0 +1,24 @@
+.faq {
+  padding-top: var(--section-md);
+  padding-bottom: var(--section-md);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.7fr 1fr;
+  gap: var(--gap-lg);
+}
+
+.heading {
+  max-width: 26rem;
+  font-size: var(--fs-quote);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-quote);
+  letter-spacing: var(--ls-tight);
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

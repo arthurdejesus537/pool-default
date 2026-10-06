@@ -1,0 +1,98 @@
+/* Tokens medidos em https://www.infinitybuilt.com.au/ — ver SITE-MESTRE.md §10 */
+:root {
+  /* Cor */
+  --color-cream: #e7f1db;
+  --color-ink: #272727;
+  --color-sage: #898f8c;
+  --color-overlay: rgba(75, 75, 75, 0.45);
+  --color-media-light: #a3aa9c; /* placeholder de mídia sobre fundo claro */
+  --color-media-dark: #474747; /* placeholder de mídia sobre fundo escuro */
+
+  /* Fonte */
+  --font-sans: var(--font-inter-tight), "Helvetica Neue", Arial, sans-serif;
+
+  --fs-display: 4.5rem; /* 72 */
+  --fs-h2: 4rem; /* 64 */
+  --fs-quote: 2rem; /* 32 */
+  --fs-stat: 3rem; /* 48 — número do trust strip (componente novo) */
+  --fs-h6: 1.5rem; /* 24 */
+  --fs-project: 1.25rem; /* 20 */
+  --fs-body: 1rem; /* 16 */
+  --fs-link-sm: 0.875rem; /* 14 */
+  --fs-nav: 0.88rem; /* 14.08 */
+  --fs-tagline: 0.75rem; /* 12 */
+  --fs-micro: 0.63rem; /* 10.08 */
+
+  --lh-display: 0.91;
+  --lh-tight: 1;
+  --lh-project: 1.1;
+  --lh-quote: 1.15;
+  --lh-body: 1.25;
+  --lh-tagline: 1.5;
+
+  --ls-tight: -0.02em;
+  --ls-project: -0.03em;
+  --ls-credit: 0.02em;
+  --ls-tagline: 0.16em;
+  --ls-micro: 0.19em;
+
+  --fw-thin: 100;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+  --fw-black: 900;
+
+  /* Espaço */
+  --gutter: 2.5rem; /* 40 */
+  --section-lg: 7rem; /* 112 */
+  --section-md: 5rem; /* 80 */
+  --section-sm: 2.5rem; /* 40 */
+  --space-2xs: 0.5rem; /* 8 */
+  --space-xs: 0.75rem; /* 12 */
+  --gap-xs: 1rem; /* 16 */
+  --gap-sm: 1.25rem; /* 20 */
+  --gap-md: 2rem; /* 32 */
+  --gap-lg: 2.5rem; /* 40 */
+  --gap-xl: 3rem; /* 48 */
+  --gap-2xl: 4rem; /* 64 */
+
+  /* Header */
+  --header-pad: 2.5rem; /* 40 no topo */
+  --header-pad-scrolled: 1.5rem; /* 24 ao rolar */
+  --header-offset: 8.88rem; /* 142.08 — padding-top do hero */
+  --logo-w: 17.625rem; /* 282 */
+  --logo-w-scrolled: 8rem; /* 128 */
+
+  /* Componentes */
+  --radius-pill: 160px;
+  --border-hair: 1px;
+  --arrow-btn: 3.125rem; /* 50 */
+  --circle-size: 11rem; /* 176 — diâmetro visível (SVG original 249 com folga) */
+
+  /* Movimento */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-header: 0.4s;
+  --dur-hover: 0.2s;
+}
+
+@media (max-width: 991px) {
+  :root {
+    --fs-h2: 3.5rem; /* 56 */
+    --header-pad: 1.5rem;
+    --logo-w: 12rem; /* 192 */
+    --logo-w-scrolled: 8rem;
+    --header-offset: 7.5rem;
+  }
+}
+
+@media (max-width: 479px) {
+  :root {
+    --gutter: 1.25rem; /* 20 */
+    --section-lg: 3rem; /* 48 */
+    --section-md: 2rem; /* 32 */
+    --fs-display: 2.5rem; /* 40 — o original estoura com 72 */
+    --fs-h2: 2.5rem; /* 40 */
+    --fs-quote: 1.5rem; /* 24 */
+    --fs-stat: 2rem;
+  }
+}

@@ -1,0 +1,31 @@
+.intro {
+  padding-top: var(--section-sm);
+  padding-bottom: var(--section-sm);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.754fr; /* 482 / 846 */
+  gap: var(--gap-xs);
+}
+
+.text {
+  margin-top: var(--gap-lg);
+  max-width: 26rem; /* 416 */
+}
+
+.mainImage {
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--gap-lg);
+  }
+
+  .mainImage {
+    height: auto;
+    aspect-ratio: 847 / 932;
+  }
+}

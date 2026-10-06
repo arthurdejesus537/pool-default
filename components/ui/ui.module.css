@@ -1,0 +1,166 @@
+/* Tagline — rótulo de seção */
+.tagline {
+  font-size: var(--fs-tagline);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-tagline);
+  letter-spacing: var(--ls-tagline);
+  text-transform: uppercase;
+  padding-bottom: var(--gap-sm);
+}
+
+/* Link com seta e sublinhado de 1px */
+.linkArrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-md);
+  padding: var(--space-2xs) 0 calc(var(--space-2xs) + 1px);
+  border-bottom: var(--border-hair) solid currentColor;
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+}
+
+.linkArrowIcon {
+  width: 0.875rem;
+  height: 0.9375rem;
+  transition: transform var(--dur-hover) var(--ease-out);
+}
+
+.linkArrow:hover .linkArrowIcon {
+  transform: translateX(4px);
+}
+
+/* Selo pílula */
+.pill {
+  display: inline-block;
+  padding: var(--space-xs) var(--gap-sm);
+  border-radius: var(--radius-pill);
+  background: var(--color-ink);
+  color: var(--color-cream);
+  font-size: var(--fs-tagline);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-tagline);
+  text-transform: uppercase;
+}
+
+/* Placeholder de mídia */
+.media {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.mediaInner {
+  position: absolute;
+  inset: -8% 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-media-light);
+  will-change: transform;
+}
+
+.mediaDark .mediaInner {
+  background: var(--color-media-dark);
+}
+
+.mediaLabel {
+  font-size: var(--fs-tagline);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--ls-tagline);
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.mediaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Círculo de texto */
+.circle {
+  width: var(--circle-size);
+  height: var(--circle-size);
+  font-size: 1.6rem;
+  font-weight: var(--fw-black);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.circle text {
+  fill: currentColor;
+}
+
+/* Wordmark placeholder (o logo do cliente entra aqui) */
+.wordmark {
+  display: block;
+  width: 100%;
+  font-weight: var(--fw-black);
+  line-height: 0.86;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.wordmark svg {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.wordmark text {
+  fill: currentColor;
+}
+
+/* CTA em pílula */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2xs);
+  padding: var(--space-xs) var(--gap-sm);
+  border: var(--border-hair) solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: var(--fs-tagline);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-tagline);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color var(--dur-hover),
+    color var(--dur-hover),
+    border-color var(--dur-hover);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.buttonCream {
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+.buttonCream:hover {
+  background: transparent;
+  color: var(--color-cream);
+  border-color: var(--color-cream);
+}
+
+.buttonInk {
+  background: var(--color-ink);
+  color: var(--color-cream);
+}
+
+.buttonInk:hover {
+  background: transparent;
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.logoImg {
+  width: 100%;
+  height: auto;
+}

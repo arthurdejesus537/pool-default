@@ -1,0 +1,191 @@
+.header {
+  --tone: var(--color-ink);
+  --tone-inverse: var(--color-cream);
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 100;
+  color: var(--tone);
+  pointer-events: none;
+}
+
+.header[data-tone="cream"] {
+  --tone: var(--color-cream);
+  --tone-inverse: var(--color-ink);
+}
+
+.inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: var(--header-pad) var(--gutter);
+  transition: padding var(--dur-header) var(--ease-out);
+  pointer-events: auto;
+}
+
+.header[data-scrolled] .inner {
+  padding-top: var(--header-pad-scrolled);
+  padding-bottom: var(--header-pad-scrolled);
+}
+
+.logo {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: var(--logo-w);
+  color: var(--tone);
+  transition:
+    width var(--dur-header) var(--ease-out),
+    color var(--dur-hover);
+}
+
+.header[data-scrolled] .logo {
+  width: var(--logo-w-scrolled);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-lg);
+  padding-left: var(--gap-2xl);
+}
+
+.links {
+  display: flex;
+  gap: var(--gap-lg);
+}
+
+/* CTA em pílula que inverte com o tom do header */
+.cta {
+  padding: var(--space-xs) var(--gap-sm);
+  border-radius: var(--radius-pill);
+  background: var(--tone);
+  color: var(--tone-inverse);
+  font-size: var(--fs-tagline);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-tagline);
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition:
+    background-color var(--dur-hover),
+    color var(--dur-hover);
+}
+
+.mobileRight {
+  display: none;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.phone {
+  position: relative;
+  z-index: 2;
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-bold);
+  color: var(--tone);
+}
+
+.overlayCta {
+  margin-top: var(--gap-md);
+  font-size: var(--fs-quote) !important;
+  font-weight: var(--fw-medium) !important;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.link {
+  display: block;
+  padding-bottom: 1.6px;
+  border-bottom: 2px solid transparent;
+  font-size: var(--fs-nav);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-body);
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+  transition:
+    color var(--dur-hover),
+    border-color var(--dur-hover);
+}
+
+.link:hover {
+  border-bottom-color: currentColor;
+}
+
+.burger {
+  position: relative;
+  z-index: 2;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--tone);
+}
+
+.burger span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  transition: transform var(--dur-header) var(--ease-out), opacity var(--dur-hover);
+}
+
+.burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--gutter);
+  padding-bottom: var(--gap-2xl);
+  background: var(--color-ink);
+  color: var(--color-cream);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--dur-header) var(--ease-out), visibility var(--dur-header);
+  pointer-events: auto;
+}
+
+.overlay[data-open] {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay a {
+  display: block;
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: var(--ls-tight);
+  text-transform: uppercase;
+}
+
+@media (max-width: 991px) {
+  .nav {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .mobileRight {
+    display: flex;
+  }
+
+  .inner {
+    align-items: center;
+  }
+}
