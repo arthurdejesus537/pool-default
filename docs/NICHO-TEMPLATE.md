@@ -70,6 +70,8 @@ Copy sempre em inglês americano, frases curtas, números concretos, voz de quem
 - **Trabalho:** navegação curta + CTA sempre à mão.
 - **Layout:** `Header` do clone; links à direita + link de CTA sublinhado; no celular, hambúrguer.
 - **Dados:** `brand.name`, `brand.logo`, `nav[]`, `contact.ctaLabel`, `contact.phone`.
+- **Logo:** se o logo do cliente for de uma cor só, use `brand.logo.mono: true` — ele vira máscara pintada com a cor do texto e acompanha o tom do header e do footer. Logo colorido: `mono` ausente.
+- **Celular:** abaixo de 480px o telefone sai do header (fica na barra fixa); o CTA da barra usa reticências se não couber.
 - **Placeholder:** `[BRAND]`, `nav` padrão (Portfolio, Styles, Pricing, Process, FAQ).
 - **Copy:** CTA com verbo + objeto: "Book a design consultation". Nunca "Contact us".
 

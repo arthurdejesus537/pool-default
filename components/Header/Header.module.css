@@ -80,6 +80,7 @@
 .phone {
   position: relative;
   z-index: 2;
+  white-space: nowrap;
   font-size: var(--fs-nav);
   font-weight: var(--fw-bold);
   color: var(--tone);
@@ -187,5 +188,12 @@
 
   .inner {
     align-items: center;
+  }
+}
+
+/* No celular o telefone já está na barra fixa (MobileCta) */
+@media (max-width: 479px) {
+  .phone {
+    display: none;
   }
 }

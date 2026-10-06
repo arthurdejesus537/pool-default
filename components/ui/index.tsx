@@ -75,6 +75,20 @@ export function Wordmark({ lines, label }: { lines: string[]; label: string }) {
 /** Logo do cliente se houver; senão, o wordmark em texto. */
 export function Logo() {
   const { logo, wordmark, name } = site.brand;
+  if (logo?.mono) {
+    return (
+      <span
+        role="img"
+        aria-label={name}
+        className={styles.logoMono}
+        style={{
+          aspectRatio: `${logo.width} / ${logo.height}`,
+          maskImage: `url(${logo.src})`,
+          WebkitMaskImage: `url(${logo.src})`,
+        }}
+      />
+    );
+  }
   if (logo) {
     // eslint-disable-next-line @next/next/no-img-element
     return <img className={styles.logoImg} src={logo.src} width={logo.width} height={logo.height} alt={name} />;

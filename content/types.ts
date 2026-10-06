@@ -13,8 +13,9 @@ export type Site = {
   meta: { title: string; description: string; url: string | null; noindex: boolean };
   brand: {
     name: string;
-    /** Logo do cliente (SVG/PNG em public/cliente). null = wordmark em texto. */
-    logo: { src: string; width: number; height: number } | null;
+    /** Logo do cliente (SVG/PNG em public/cliente). null = wordmark em texto.
+     *  mono: true pinta o logo com a cor do texto (segue o tom do header e do footer). */
+    logo: { src: string; width: number; height: number; mono?: boolean } | null;
     wordmark: string[];
     circleText: string;
   };

@@ -35,6 +35,10 @@
 
   .cta {
     flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: var(--ls-credit);
     background: var(--color-cream);
     color: var(--color-ink);
   }
